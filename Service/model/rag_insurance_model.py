@@ -50,7 +50,7 @@ class InsuranceModel:
             ).split_documents(do)
         return all_splits
     def text_embedding(self):
-        return HuggingFaceEmbeddings(model_name=r"D:\jincheng_project\RAG\all-mpnet-base-v2")
+        return HuggingFaceEmbeddings(model_name=r"D:\Backend_insurance\Algorithm\Fine_tuning\Models\all-mpnet-base-v2")
     def vector_search(self):
         embedding_dim = len(self.embeddings.embed_query("hello world"))
         index = faiss.IndexFlatL2(embedding_dim)
