@@ -55,7 +55,8 @@ eeg_dataset
 feature.csv
 
 !.vscode/launch.json
-Algorithm/Fine_tuning/
+Algorithm/Fine_tuning/Models
+
 recordings/
 insurance/
 speech/
