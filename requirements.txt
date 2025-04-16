@@ -1,0 +1,12 @@
+unsloth
+wandb
+pyaudio
+funasr
+langchain
+langchain-community
+faiss
+faiss-cpu
+langgraph
+langchain_ollama
+unstructured
+openpyxl
