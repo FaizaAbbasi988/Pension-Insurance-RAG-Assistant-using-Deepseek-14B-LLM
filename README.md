@@ -27,8 +27,8 @@ Required documents in specified paths
 ## Installation
 Clone the repository:
 
-git clone https://github.com/FaizaAbbasi988/pension-rag-assistant.git 
-cd pension-rag-assistant
+git clone git@github.com:FaizaAbbasi988/Pension-Insurance-RAG-Assistant-using-Deepseek-14B-LLM.git 
+
 
 
     A[Streamlit UI] --> B[FastAPI Backend]
