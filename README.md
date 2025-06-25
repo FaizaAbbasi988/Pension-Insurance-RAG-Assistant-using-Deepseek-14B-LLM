@@ -1,46 +1,38 @@
-# 如何运行项目（中文说明）
-创建虚拟环境：
-在终端中运行以下命令创建虚拟环境：
-python -m venv insurance
+# Pension Insurance RAG Assistant using Deepseek-R1-14B
 
-激活虚拟环境：
-在终端中运行以下命令激活虚拟环境：
-insurance/Scripts/activate
+![Streamlit App](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-00A67E?style=for-the-badge)
 
-安装依赖库：
-在虚拟环境中运行以下命令安装项目依赖：
-pip install -r requirements.txt
+A Retrieval-Augmented Generation (RAG) system for answering pension insurance queries, with multilingual support (English/中文).
 
-启动项目：
-打开两个终端窗口，并在每个终端中激活虚拟环境。然后分别执行以下命令：
+## Features
 
-终端一（运行后端服务）：
-uvicorn main:app --reload
+- 🗂️ Document-based question answering across multiple knowledge domains
+- 🌐 Bilingual interface (English/Chinese)
+- 🔍 Context-aware responses using RAG pipeline
+- 📊 Document type specialization:
+  - Policy advice
+  - Business procedures
+  - Platform operations
+  - Claim procedures
+  - Verified contact numbers
 
-终端二（运行前端 Streamlit 应用）：
-streamlit run D:\Backend_insurance\Service\frontend\app.py
-请根据你的本地路径修改上面的绝对路径。
+## pre-requisities
 
-# How to Run the Project (English Instructions)
-Create a Virtual Environment:
-Run the following command in your terminal:
-python -m venv insurance
+Python 3.10+
+Ollama server running locally
+Required documents in specified paths
 
-Activate the Virtual Environment:
-Use the following command to activate it:
-insurance/Scripts/activate
+## Installation
+Clone the repository:
 
-Install Dependencies:
-Install all required libraries:
-pip install -r requirements.txt
+git clone https://github.com/FaizaAbbasi988/pension-rag-assistant.git 
+cd pension-rag-assistant
 
-Start the Project:
-Open two terminal windows and activate the virtual environment in both. Then run the following commands:
 
-First Terminal (Run Backend API):
-uvicorn main:app --reload
-
-Second Terminal (Run Frontend using Streamlit):
-streamlit run D:\Backend_insurance\Service\frontend\app.py
-Make sure to change the absolute path according to your local setup.
-
+    A[Streamlit UI] --> B[FastAPI Backend]
+    B --> C[RAG Pipeline]
+    C --> D[Document Vector Stores]
+    C --> E[LLM (Ollama)]
+    D --> F[Excel/PDF Documents]
